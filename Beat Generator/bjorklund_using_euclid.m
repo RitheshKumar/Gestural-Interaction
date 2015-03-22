@@ -9,7 +9,7 @@ clc;
 % n>k
 % n is the total no. of beats, k is the no. of hits/onsets
 
-n=2; k=2;
+n=15; k=12;
 % n=5;k=3;
 % n=13;k=5;
 
@@ -20,8 +20,10 @@ A=J(1,1:a);
 B=J(1,1+a:end);
 tempB=B(:,end:-1:end-floor(b/a)*a+1);   %holds int(b/a) strings of size a
                                         %starting from the rightmost end
-tempB=reshape(tempB,[floor(b/a),a]);    %arranges, such that a strings are 
-                                        %one below another
+tempB=reshape(tempB,[a,floor(b/a)]);    %arranges, such that a strings are 
+tempB=tempB';                           %one below another
+                                          
+    
 tempA=A(:,1:a);
 A=[tempA;tempB];
 B=B(1,1:mod(b,a));
