@@ -3,17 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0028DC9A1917DEF8000EEC72 /* AHRS.c in Sources */ = {isa = PBXBuildFile; fileRef = 0028DC991917DEF8000EEC72 /* AHRS.c */; };
-		6B80D5ED181FAAE7003C98C1 /* maxmspsdk.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B80D5EC181FAAE7003C98C1 /* maxmspsdk.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0028DC991917DEF8000EEC72 /* AHRS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AHRS.c; sourceTree = "<group>"; };
-		2FBBEAE508F335360078DB84 /* AHRS.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHRS.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FBBEAE508F335360078DB84 /* AHRS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHRS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B80D5EC181FAAE7003C98C1 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../maxmspsdk.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +40,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FBBEAE508F335360078DB84 /* AHRS.mxo */,
+				2FBBEAE508F335360078DB84 /* AHRS.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,7 +74,7 @@
 			);
 			name = "max-external";
 			productName = iterator;
-			productReference = 2FBBEAE508F335360078DB84 /* AHRS.mxo */;
+			productReference = 2FBBEAE508F335360078DB84 /* AHRS.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -84,9 +83,10 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "AHRS" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -109,7 +109,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B80D5ED181FAAE7003C98C1 /* maxmspsdk.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +154,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B80D5EC181FAAE7003C98C1 /* maxmspsdk.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -171,6 +171,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B80D5EC181FAAE7003C98C1 /* maxmspsdk.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
