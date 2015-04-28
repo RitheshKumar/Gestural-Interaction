@@ -14,7 +14,7 @@ draw();
 
 function draw()
 {
- 
+  
   with (sketch)
   {glclear();
    glclearcolor(0.2,0.5,0.5);
@@ -43,6 +43,7 @@ function msg_int(v)
 function bang()
 {
 	draw();
+	metinit(ns);
 	refresh();
 	outlet(0,bjork);
 }
@@ -70,7 +71,7 @@ function metro(v)
 {
     metinit(ns);
     met[v]=1;
-    outlet(1,met);
+    outlet(1,bjork[v]);
     outlet(2,ns);
     bang();
 }
